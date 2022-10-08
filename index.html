@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="personas" name="personas">
+      <div id="bodypersonas" class="bodyGeneral">
+        <div id="encabezado" class="divEncabezado">
+          <label>Registro personas</label>
+        </div>
+        <div id="data" class="divData">
+          <table class="acciones">
+            <tr>
+              <td>
+                <label>Tipo de documento</label>
+              </td>
+              <td>
+                <input type="hidden" name="id" id="id" value="" />
+                <input type="text" placeholder="Tipo de documento" />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="">Documento</label>
+              </td>
+              <td><input type="text" placeholder="Documento" /></td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="">Primer nombre</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="Primer nombre"
+                  id="primerNombre"
+                  value=""
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Segundo nombre</label>
+              </td>
+              <td><input type="text" placeholder="Segundo nombre" /></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Primer apellido</label>
+              </td>
+              <td><input type="text" placeholder="Primer apellido" /></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Segundo apellido</label>
+              </td>
+              <td><input type="text" placeholder="Segundo apellido" /></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Correo</label>
+              </td>
+              <td><input type="text" placeholder="Correo" /></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Celular</label>
+              </td>
+              <td><input type="text" placeholder="Celular" /></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="">Estado</label>
+              </td>
+              <td><input type="text" placeholder="Estado" /></td>
+            </tr>
+          </table>
+          <div id="botones" class="divBotones">
+            <table class="acciones">
+                <tr>
+                    <td>
+                        <button id="Agregar" name="Agregar">Agregar</button>
+                    </td>
+                    <td>
+                        <button id="Actualizar" name="Actualizar">Actualizar</button>
+                    </td>
+                    <td>
+                        <button id="Consultar" name="Consultar">Consultar</button>
+                    </td>
+                </tr>
+            </table>
+          </div>
+
+          <div id="dataResult" class="divResult">
+            <table class="datata">
+                <thead>
+                    <td>DOCUMENTO</td>
+                    <td>NOMBRE</td>
+                    <td>CORREO</td>
+                    <td>CELULAR</td>
+                    <td colspan="2">ACCIONES</td> 
+                </thead>
+                <tbody id="tBodyData">
+                    <!-- aqui va la consulta de la base de datos-->
+                    <tr>
+                        <td>1023</td>
+                        <td>Juan Manuel</td>
+                        <td>juanmanuelguaquespud@gmail.com</td>
+                        <td>3156648190</td>
+                    </tr>
+                    <tr>
+                        <td>1023</td>
+                        <td>Juan Manuel</td>
+                        <td>juanmanuelguaquespud@gmail.com</td>
+                        <td>3156648190</td>
+                    </tr>
+                    <tr>
+                        <td>1023</td>
+                        <td>Juan Manuel</td>
+                        <td>juanmanuelguaquespud@gmail.com</td>
+                        <td>3156648190</td>
+                    </tr>
+                    <tr>
+                        <td>1023</td>
+                        <td>Juan Manuel</td>
+                        <td>juanmanuelguaquespud@gmail.com</td>
+                        <td>3156648190</td>
+                    </tr>
+                    <tr>
+                        <td>1023</td>
+                        <td>Juan Manuel</td>
+                        <td>juanmanuelguaquespud@gmail.com</td>
+                        <td>3156648190</td>
+                    </tr>
+                </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

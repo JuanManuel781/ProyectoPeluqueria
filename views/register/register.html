@@ -18,6 +18,8 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Register</title>
   </head>
   <body>
@@ -35,6 +37,7 @@
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"></label>
           <div class="mb-3">
+            <input type="hidden" name="id" id="id" value="" />
             <label for="disabledSelect" class="form-label"
               >Tipo de documento</label
             >
@@ -84,12 +87,23 @@
         <div class="input-group input-group-sm mb-3">
             <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/user1.png" alt="" width="22rem"></span>
             <select id="TipoUsuario" class="form-select" name="TipoUsuario">
-                <option value="admin">administrador</option>
-                <option value="client">cliente</option>
+              
+            
               </select>
         </div>
         
-        <input type="button" class="btn btn-primary" value="Agregar" onclick="Agregar();">
+        <input
+        type="button"
+        class="btn btn-primary"
+        value="Agregar"
+        onclick="Agregar();"
+      />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="Actualizar"
+        onclick="Modificar();"
+      />
       </form>
     </div>
     <br>
@@ -111,7 +125,9 @@
                   <td>NOMBRE</td>
                   <td>CORREO</td>
                   <td>CELULAR</td>
-                  <td>ESTADO</td>
+                  <td>USUARIO</td>
+                  <td>CONTRASEÑA</td>
+                  <td>TIPO USUARIO</td>
                   <td colspan="2">ACCIONES</td>                                
               </tr>
           </thead>
@@ -123,3 +139,8 @@
   </div>
   </body>
 </html>
+<script src="../../js/usuarios.js"></script>
+<script>
+  loadTable();
+  loadTableroles();
+</script>

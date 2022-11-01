@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styleGlobal.css">
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container-sm" >
+      <div>
+        <table>
+          <tr>
+            <td>
+              <h1>Registro Agendamientos</h1>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <form>
+
+        <div class="input-group input-group-sm mb-3">
+            <input type="hidden" name="id" id="id" value="" />
+            <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/Indentificacion.png" alt="" width="22rem"></span>
+            <input type="date" name="dateAgendamiento"id="dateAgendamiento" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Fecha" required>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/user1.png" alt="" width="22rem"></span>
+            <input type="time"  name="timeAgendamiento" id="timeAgendamiento" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Hora" required>
+        </div>
+       
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/user1.png" alt="" width="22rem"></span>
+          <select id="idUser" class="form-select" name="idUser">
+            
+          
+            </select>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/user1.png" alt="" width="22rem"></span>
+          <select id="idServicio" class="form-select" name="idServicio">
+            
+          
+            </select>
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"><img src="C:/xampp/htdocs/UNAB/ProyectoPeluqueria/assets/icons/user1.png" alt="" width="22rem"></span>
+          <select id="idPago" class="form-select" name="idPago">
+            
+          
+            </select>
+        </div>
+
+        <input
+        type="button"
+        class="btn btn-primary"
+        value="Agregar"
+        onclick="Agregar();"
+      />
+      <input
+        type="button"
+        class="btn btn-primary"
+        value="Actualizar"
+        onclick="Modificar();"
+      />
+      </form>
+    </div>
+    <br>
+    <br>
+    <div class="container-sm" >
+      <table>
+        <tr>
+          <td>
+            <h1>Lista Agendamientos</h1>
+          </td>
+        </tr>
+      </table>
+    </div>
+  <div class="container-sm" >
+      <table class="table">
+          <thead class="table-dark">
+              <tr>
+                  <td>FECHA</td>
+                  <td>HORA</td>
+                  <td>USUARIO</td>
+                  <td>SERVICO</td>
+                  <td>TIPO PAGO</td>
+                  <td colspan="2">ACCIONES</td>                                
+              </tr>
+          </thead>
+          <tbody id="dataResult">
+              <!-- Aquí va la consulta de la base de datos -->     
+
+          </tbody>
+      </table>
+  </div>
+  </body>
+</html>
+<script src="../../js/agendamientos.js"></script>
+<script>
+ loadTable();
+  loadTableUser();
+  loadTableService();
+  loadTableTipoPago();
+</script>
